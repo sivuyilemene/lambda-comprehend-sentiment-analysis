@@ -6,8 +6,7 @@ def lambda_handler(event, context):
     comprehend = boto3.client(service_name='comprehend',region_name='us-east-1')
     
     text = """
-    'This is a dangerous weather condition and its not over', New York City Mayor Eric Adams
-    said on Friday morning, as New Yorkers struggle to commute amid roads and subway closures'
+    'FEEL GOOD | Cape Town officers lauded for helping deliver a 'beautiful, bouncing baby boy' on gravel road'
     """
     #calling sentiment method a parsing through the text
     comprehend_json_obj = comprehend.detect_sentiment(Text=text, LanguageCode='en')
